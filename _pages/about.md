@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Nak Won Rim"
+title: "About me"
 excerpt: "About me"
 author_profile: true
 ---
