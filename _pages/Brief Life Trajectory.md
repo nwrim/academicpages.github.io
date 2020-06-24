@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Brief Life Trajectory"
-permalink: /about/
+permalink: /brief-life-trajectory/
 author_profile: true
 ---
 I was very interested in biology during elementary school and middle school. I was a member of the science education academy for the gifted at a national university and won a prize in the Korean Biology Olympiad Middle School Division.
