@@ -4,8 +4,9 @@ date: '2020-03-25'
 permalink: /posts/2020/03/pokemon-decision-tree/
 tags:
   - just for fun
-summary: "Drawing decision trees on Pokémons depending on they made it to the Galar Pokédex"
 ---
+
+Drawing decision trees on Pokémons depending on whether they made it to the Galar Pokédex
 
 # Disclaimer
 
