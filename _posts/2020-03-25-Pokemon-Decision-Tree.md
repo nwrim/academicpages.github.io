@@ -43,7 +43,7 @@ The first line of each split node indicates what variable the children nodes wer
 
 According to Bulbapedia, Egg Groups are "categories which determine which Pokémon are able to interbreed" (read more [here](https://bulbapedia.bulbagarden.net/wiki/Egg_Group)). I thought that since they are a broad category that classifies similar Pokémons together, they might be a good starting point to fit the decision trees. Here is the result:
 
-![tree 1](/img/pokemon_tree/tree1.png)
+![tree 1](/files/posts/pokemon_tree/tree1.png)
 
 We can see that the only split that survived the pruning was the `no-egg` egg groups (more formally No Eggs Discovered egg group). This is understandable because almost all legendary Pokémon, mythical Pokémon, and Ultra Beasts,  which are major components of this egg group, did not make it to the Galar Pokédex.
 
