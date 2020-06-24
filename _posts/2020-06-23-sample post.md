@@ -1,7 +1,7 @@
 ---
 title: 'sample post'
 date: 2012-08-14
-permalink: /posts/sample/
+permalink: /projects/sample/
 tags:
   - sample
 ---
