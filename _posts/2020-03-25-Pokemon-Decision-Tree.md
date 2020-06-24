@@ -55,7 +55,7 @@ Because the tree classifies all Pokémons as 'Not in Galar', the accuracy of the
 
 Generations refer to the generation in which the Pokémon was introduced. Before fitting, I thought that this tree would not make any split since I thought the developers would have allocated similar numbers of Pokémons from each generation. Here is the decision tree using generations:
 
-![tree 2](/img/pokemon_tree/tree2.png)
+![tree 2](/files/posts/pokemon_tree/tree2.png)
 
 Interestingly, Pokémons from the fifth generation were classified as 'In Galar' while Pokémons from all other generations were classified as 'Not in Galar'. The accuracy of this tree was about 0.62 and the AUC was about 0.59. These scores show that this tree is only slightly better than the null model.
 
@@ -65,7 +65,7 @@ Types refer to the type category Pokémons belongs to. Before fitting, I suspect
 
 Here is the fitted decision tree:
 
-![tree 3](/img/pokemon_tree/tree3.png)
+![tree 3](/files/posts/pokemon_tree/tree3.png)
 
 Contrary to my expectation, the only split was made in the `ghost` type, where ghost-type Pokémons were classified as 'In Galar'. The accuracy of this tree was about 0.63 and the AUC was about 0.66. These scores show that this tree is only slightly better than the null model, although note that AUC was quite better compared to the generation tree model (0.07).
 
@@ -73,7 +73,7 @@ Contrary to my expectation, the only split was made in the `ghost` type, where g
 
 Move Set refers to all the moves a Pokémon can learn in Generation 7 (through leveling up, using TM/HM, egg moves, etc). More than 300 dummy variables were used to fit this tree. Note that some moves are obviously related to each other (for example, it makes intuitive sense that a Pokémon that learns ember will have a higher chance of learning Flamethrower) but I did not take them into account when making the dummy variables. Since this tree can use so many variables, I thought that this tree will have the most power compared to another trees. Here is the fitted tree:
 
-![tree 4](/img/pokemon_tree/tree4.png)
+![tree 4](/files/posts/pokemon_tree/tree4.png)
 
 We could see that this tree is much more complicated than the other two trees we had seen so far. The first split was made with the move `attract`. I think this is related to the aforementioned fact that almost all legendary Pokémon, mythical Pokémon, and Ultra Beasts did not make it to the Galar Pokédex. Most of these Pokémons are genderless, so they cannot learn the move `attract`.
 
@@ -85,11 +85,11 @@ The accuracy of this tree was about 0.72 and the AUC was about 0.71, showing qui
 
 Finally, I fitted a decision tree using all variables we discussed so far. Here is the result:
 
-![tree 5](/img/pokemon_tree/tree5.png)
+![tree 5](/files/posts/pokemon_tree/tree5.png)
 
 Interestingly, the tree was less complicated and less deep than the move sets tree. It also performed worse: the accuracy was about 0.67 and the AUC was about 0.67. Following is a confusion matrix comparing the two models:
 
-![confusion matrix](/img/pokemon_tree/confusion.png)
+![confusion matrix](/files/posts/pokemon_tree/confusion.png)
 
 The worse performance of the bigger model that has all the variables of the smaller model could be related to the fact that the decision tree is built in a greedy way. The initial split on `no-egg` might have been less beneficial than split on `attract` in a broader view, but it provided better improvement in the short term.
 
@@ -97,7 +97,7 @@ The worse performance of the bigger model that has all the variables of the smal
 
 All trees that were considered did not give a good, concise explanation of the decision-making process behind what Pokémons were included in the Galar Pokédex. We could get a model that fits the data perfectly if we do not prune the tree but it will look something like this:
 
-![tree 6](/img/pokemon_tree/tree6.png)
+![tree 6](/files/posts/pokemon_tree/tree6.png)
 
 which makes little sense.
 
